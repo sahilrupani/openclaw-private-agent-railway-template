@@ -2,7 +2,7 @@
 
 OpenClaw is an open-source AI agent gateway. Instead of living in a browser tab, it connects to the messaging apps you already use — Telegram, Discord, Slack and others — and acts as a persistent assistant that can research, draft, monitor and chain tasks on your behalf. It routes to every major LLM provider (Claude, GPT, Gemini, OpenRouter) using your own API keys, so your prompts and credentials never pass through a third-party agent vendor.
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/openclaw-private-agent?referralCode=zxcgoT)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/openclaw-private-agent?referralCode=zxcgoT&utm_medium=integration&utm_source=template&utm_campaign=generic)
 
 ## 🚀 Quick Start Deployment Guide
 
