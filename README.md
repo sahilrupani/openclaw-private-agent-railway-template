@@ -40,7 +40,7 @@ OpenClaw is an open-source AI agent gateway. Instead of living in a browser tab,
 
 This template runs OpenClaw as a single container on Railway, built from a `node:24-bookworm` image with the `openclaw` npm package pinned to `2026.5.7`. A wrapper process serves on `PORT` (8080) and reverse-proxies all traffic — WebSockets included — to the internal gateway on `18789`. Railway's healthcheck targets `/setup/healthz`.
 
-A volume mounts at `/data` and holds configuration, credentials, agent memory and workspace files. `OPENCLAW_STATE_DIR` (`/data/.openclaw`) and `OPENCLAW_WORKSPACE_DIR` (`/data/workspace`) must both resolve inside it, or state is lost on every redeploy. After deploying, `/setup` runs the first-run wizard (protected by `SETUP_PASSWORD`), and the Control UI lives at `/openclaw`. Setting `OPENCLAW_GATEWAY_TOKEN` to a fixed secret keeps that Control UI token stable across restarts.
+A volume mounts at `/data` and holds configuration, credentials, agent memory and workspace files. `OPENCLAW_STATE_DIR` (`/data/.openclaw`) and `OPENCLAW_WORKSPACE_DIR` (`/data/workspace`) must both resolve inside it, or state is lost on every redeploy. After deploying, `/setup` runs the first-run wizard (protected by `SETUP_PASSWORD`), and once setup completes the OpenClaw UI is served at the URL root (`/`). Setting `OPENCLAW_GATEWAY_TOKEN` to a fixed secret keeps that Control UI token stable across restarts.
 
 The result is a private, always-on agent whose state, credentials, and provider keys stay on infrastructure you control, instead of a vendor's servers.
 
